@@ -13,6 +13,7 @@ jobs:
       - image: "circleci/python:3.9"
     steps:
       - checkout
+      - run: pip install -r requirements.txt
       - run: python app.py
 
 workflows:
