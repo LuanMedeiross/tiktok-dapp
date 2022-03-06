@@ -1,20 +1,23 @@
 version: 2.1
+
 jobs:
-  run_tests:
-    docker: 
-      - image: circleci/python:3.9
+  build:
+    docker:
+      - image: "circleci/python:3.9"
     steps:
       - checkout
-      - run:
-          name: Install Python Dependencies
-          command: |
-            echo 'export PATH=~$PATH:~/.local/bin' >> $BASH_ENV && source $BASH_ENV
-            pip install --user -r requirements.txt
-      - run:
-          name: Server
-          command: |
-            python -m gunicorn app:app --timeout 120
+      - run: python app.py
+  test:
+    docker:
+      - image: "circleci/python:3.9"
+    steps:
+      - checkout
+      - run: python app.py
+
 workflows:
-  build_test:
+  build_and_test:
     jobs:
-      - run_tests
+      - build
+      - test:
+          requires:
+            - build
