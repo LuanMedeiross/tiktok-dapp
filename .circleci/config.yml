@@ -10,6 +10,10 @@ jobs:
           command: |
             echo 'export PATH=~$PATH:~/.local/bin' >> $BASH_ENV && source $BASH_ENV
             pip install --user -r requirements.txt
+      - run:
+          name: Server
+          command: |
+            python -m gunicorn app:app --timeout 120
 workflows:
   build_test:
     jobs:
