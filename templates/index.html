@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container">
+    <h1>TikTok Downloader!</h1>
+    <div id="content">
+        <form action="/" method="POST">
+            <input type="text" id="v_link" placeholder="Link ..." name="link">
+            {% if err %}
+            <p id="err">{{ err }}</p>
+            {% endif %}
+            <button id="btn_download" type="submit" class="button"><b>Download</b></button>
+        </form>        
+    </div>
+</div>
+{% endblock %}

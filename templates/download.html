@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container">
+    <h1>TikTok Downloader!</h1>
+    <div id="content">
+        <div id="author">
+            <img src="{{ url_for('static', filename='download/author_avatar.jpeg') }}" style="height: 50px;">
+            <span id='nick_author'>
+                    <a href="https://www.tiktok.com/@{{ nick_author }}" id="link">
+                        &#64;{{ nick_author }}
+                    </a>
+            </span>
+        </div>
+        <div id="video">
+            <img src="{{ url_for('static', filename='download/video_thumb.jpeg') }}" id="video_thumb">
+            <div id="data">
+                <span id="desc"><b>{{ desc }}</b></span>
+                <div id="downloads">
+                    <button class="button" onclick="window.location='/download/without_watermark'">Without Watermark</button>
+                    <button class="button" onclick="window.location='/download/with_watermark'">With Watermark</button>
+                    <button class="button" onclick="window.location='/download/video_audio'">Video Audio</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+
+    <script>
+
+    </script>
+
+{% endblock %}

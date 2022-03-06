@@ -1,0 +1,125 @@
+body {
+    background-color: rgb(85, 85, 255);
+}
+
+* {
+    font-family: monospace;
+}
+
+.container {
+    display: flex;            /* establish flex container */
+    justify-content: center; /* center items vertically, in this case */
+    align-items: center;     /* center items horizontally, in this case */
+    height: 500px;
+    flex-direction: column;
+}
+  
+#content {
+    justify-content: space-between;
+    width: 400px;
+    height: auto;
+    text-align: center;
+    padding: 20px 15px 20px 15px;
+    border-radius: 5px;
+    border: 2px solid yellow;
+    box-shadow: 3px 3px 8px 0 rgb(47, 47, 247);
+}
+
+#btn_download {
+    border-block-end: 8px solid rgb(190, 187, 0);
+    height: 45px;
+    font-size:20px;
+}
+
+#btn_download:hover {
+    border-block-end: rgb(255, 251, 0);
+}
+
+#v_link {
+    width: 96.5%;
+    height: 45px;
+    padding: 0 5px 0 5px;
+    border-radius: 5px;
+    border: 2px solid yellow;
+}
+
+#v_link:focus {
+    box-shadow: 0 0 5px 0 silver;
+    outline: 0;
+}
+
+#err {
+    width: 97.5%;
+    height: 38px;
+    background-color: rgb(255, 54, 54);
+    border: 2px solid rgb(255, 0, 0);
+    padding: 5px 0 0 5px;
+    border-radius: 5px;
+    margin-bottom: 1px;
+    color: white;
+    font-size: 15px;
+}
+
+h1 {
+    color: yellow;
+    text-shadow: 1px 1px black;
+}
+
+#nick_author {
+    color: yellow;
+    font-size: 20px;
+    font-family: monospace;
+}
+
+#video {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 15px;
+    padding: 10px 0 0 0;
+    border-top: 2px solid yellow;
+}
+
+#desc {
+    color: yellow;
+}
+
+#downloads {
+    margin-top: 15px;
+}
+
+#video_thumb {
+    max-height: 250px;
+    margin-right: 15px;
+}
+
+#author {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button {
+    width: 100%;
+    background-color: rgb(255, 251, 0);
+    border: none;
+    border-block-end: 5px solid rgb(190, 187, 0);
+    height: 30px;
+    border-radius: 5px;
+    font-size: 10px;
+    margin-top: 10px;
+    color: rgb(55, 55, 216);
+}
+
+.button:hover {
+    border-block-end: rgb(255, 251, 0);
+}
+
+#link:link, #link:visited {
+    color: yellow;
+    text-decoration: none;
+}
+
+#link:hover {
+    text-decoration: underline;
+}
