@@ -17,9 +17,6 @@ jobs:
       - run: python app.py
 
 workflows:
-  build_and_test:
+  build:
     jobs:
       - build
-      - test:
-          requires:
-            - build
